@@ -25,7 +25,7 @@ Windows 11 host with Nvidia RTX 4070TI GPU (12GB VRAM) through WSL2
 
 ## *Documentation System (RAG + Summarization)*
 
-A microservices-based system combining document Q&A (RAG) and content summarization capabilities.
+System combining document Q&A (RAG) and content summarization capabilities.
 
 **Architecture:**
 - Document Ingestion Service (parsing, chunking, embedding)
