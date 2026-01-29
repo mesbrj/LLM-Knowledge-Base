@@ -6,6 +6,8 @@
 
 - [Locally LLMs with Ollama on WSL2 with NVIDIA GPU support](/docs/LOCAL-LLM.md)
 
+- [Locally LLMs with llama.cpp on WSL2 with NVIDIA GPU support]
+
 - [RAG + Summarization (Documentation System): Ollama, LangChain, Qdrant](/rag-pipeline/README.md)
 
 - **Prompt Engineering with Chain-of-Thought** - Systematic techniques for better outputs
@@ -28,7 +30,7 @@
 
 ## GPU Computing
 
-- [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)]
+- [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)](/cuda-python/README.md)
 
 - [NVIDIA cuBLAS - GPU-accelerated APIs: Basic Linear Algebra Subprograms and General Matrix Multiplication]
 

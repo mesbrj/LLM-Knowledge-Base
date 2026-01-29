@@ -25,14 +25,10 @@ System combining document Q&A (RAG) and content summarization capabilities.
 *Summarization:*
 - Multiple formats (bullet points, paragraphs, executive summary)
 - Configurable length (short/medium/long)
-- Batch processing with concurrent workers
-- Job queue with Go channels
 
 *API & Interface:*
 - REST API (ingestion, query, summarization endpoints)
 - CLI tool for local operations
-- WebSocket for streaming responses
-- Health checks and metrics
 
 MVP Technical Stack:
 - **Language:** Python 3.11+
