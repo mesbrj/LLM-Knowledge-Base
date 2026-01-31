@@ -60,6 +60,10 @@ cmake .. && make -j$(nproc)
 
 ![](/nvidia-cuda/cuda-toolkit/histEqualizationNPP.png)
 
+- This sample illustrates pseudo- and quasi- random numbers produced by CURAND
+
+![](/nvidia-cuda/cuda-toolkit/randomFog.png)
+
 ### Running (test) all samples
 ```shell
 # from cuda-samples root directory
