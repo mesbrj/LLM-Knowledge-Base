@@ -1,17 +1,12 @@
 # AI-Knowledge-Base
 
-## NVIDIA CUDA
-
-- [CUDA Toolkit](/nvidia-cuda/cuda-toolkit/README.md)
-- [Container Toolkit](/nvidia-cuda/container-toolkit/README.md)
-
 ## LLMs
 
 ### Local LLMs
 
 - [**Ollama**](/docs/LOCAL-LLM.md)
 - [**llama.cpp**](/docs/LOCAL-LLM.md)
-- **[NVIDIA NIM](https://docs.nvidia.com/nim/large-language-models/latest/introduction.html) (NVIDIA Inference Microservices)**
+- [**NVIDIA NIM (NVIDIA Inference Microservices)**](/docs/LOCAL-LLM.md)
 
 ### Core techniques
 
@@ -36,6 +31,11 @@
 - **Model Evaluation & Benchmarking** - lm-eval and RAGAS
 
 ## GPU Computing
+
+## NVIDIA CUDA
+
+- [CUDA Toolkit](/nvidia-cuda/cuda-toolkit/README.md)
+- [Container Toolkit](/nvidia-cuda/container-toolkit/README.md)
 
 - [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)](/nvidia-cuda/cuda-python/README.md)
 
