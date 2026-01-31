@@ -5,7 +5,7 @@
 - [CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#getting-started-with-cuda-on-wsl-2) 
     - [CUDA Toolkit (WSL-Ubuntu)](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
 
-![](/nvidia-cuda/cuda-toolkit/simpleMPI.png)
+![](/nvidia-cuda/cuda-toolkit/nvidia-smi.png)
 
 - [CUDA Samples](https://github.com/NVIDIA/cuda-samples)
 
