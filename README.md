@@ -32,7 +32,7 @@
 
 ## GPU Computing
 
-## NVIDIA CUDA
+### NVIDIA CUDA
 
 - [CUDA Toolkit](/nvidia-cuda/cuda-toolkit/README.md)
 - [Container Toolkit](/nvidia-cuda/container-toolkit/README.md)
