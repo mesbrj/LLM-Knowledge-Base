@@ -2,11 +2,15 @@
 
 ## LLMs
 
+### Local LLMs
+
+- **[NVIDIA NIM](https://docs.nvidia.com/nim/large-language-models/latest/introduction.html) (NVIDIA Inference Microservices)**
+
+- [**Ollama**](/docs/LOCAL-LLM.md)
+
+- **llama.cpp**
+
 ### Core techniques
-
-- [Local LLMs with Ollama](/docs/LOCAL-LLM.md)
-
-- **Local LLMs with llama.cpp**
 
 - [RAG + Summarization (Documentation System): Ollama, LangChain, Qdrant](/rag-pipeline/README.md)
 
