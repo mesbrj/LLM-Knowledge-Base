@@ -30,7 +30,7 @@
 
 ## GPU Computing
 
-- [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)](/cuda-python/README.md)
+- [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)](/nvidia-cuda/cuda-python/README.md)
 
 - [NVIDIA cuBLAS - GPU-accelerated APIs: Basic Linear Algebra Subprograms and General Matrix Multiplication]
 
