@@ -1,0 +1,48 @@
+# GPU Access in WSL2 containers
+Pre-requisites:
+- ***NVIDIA Driver installed only on Windows host***
+- ***NVIDIA CUDA Toolkit installed in WSL2 Ubuntu 24.04.3 LTS***
+
+## WSL2 - Ubuntu 24.04.3 LTS
+
+[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+
+- [With apt: Ubuntu, Debian](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian)
+
+- Verify / Generete [(CDI) Container Device Interface](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html) (Podman)
+
+```bash
+nvidia-ctk cdi list 
+# If no CDI devices found, generate them
+# INFO[0000] Found 0 CDI devices
+
+sudo nvidia-ctk cdi generate --output=/var/run/cdi/nvidia.yaml
+
+nvidia-ctk cdi list
+#INFO[0000] Found 1 CDI devices
+#nvidia.com/gpu=all
+```
+
+```bash
+# If necessary check the systemd services for CDI refresh
+nvidia-cdi-refresh.path
+nvidia-cdi-refresh.service
+```
+
+- Run a container with GPU access
+
+```bash
+podman run --rm --device nvidia.com/gpu=all ubuntu nvidia-smi
+```
+![](/nvidia-cuda/container-toolkit/nvidia-smi.png)
+
+```bash
+podman run --rm \
+  --device nvidia.com/gpu=all \
+  docker.io/nvidia/samples:nbody nbody -gpu -benchmark
+```
+![](/nvidia-cuda/container-toolkit/cuda-sample.png)
+```bash
+podman run -it --name tfgpu --device nvidia.com/gpu=all -p 8888:8888 -v "${PWD}:/tf/notebooks" docker.io/tensorflow/tensorflow:latest-gpu-jupyter
+```
+![](/nvidia-cuda/container-toolkit/tensorflow-gpu-jupyter.png)

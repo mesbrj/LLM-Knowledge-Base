@@ -1,6 +1,9 @@
-## GPU Access in WSL2
+# GPU Access in WSL2
 
-***NVIDIA Driver installed only on Windows host***
+Pre-requisite:
+- ***NVIDIA Driver installed only on Windows host***
+
+## CUDA Toolkit in WSL2 - Ubuntu 24.04.3 LTS
 
 - [CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#getting-started-with-cuda-on-wsl-2) 
     - [CUDA Toolkit (WSL-Ubuntu)](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
@@ -8,7 +11,6 @@
 ![](/nvidia-cuda/cuda-toolkit/nvidia-smi.png)
 
 - [CUDA Samples](https://github.com/NVIDIA/cuda-samples)
-
 
 
 ```shell
@@ -56,6 +58,3 @@ cmake .. && make -j$(nproc)
 - This CUDA Sample demonstrates how to use NPP for histogram equalization for image data
 
 ![](/nvidia-cuda/cuda-toolkit/histEqualizationNPP.png)
-
-## GPU Access in WSL2 containers
-- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
