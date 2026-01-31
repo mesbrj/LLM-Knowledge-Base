@@ -39,9 +39,9 @@ podman run --rm --device nvidia.com/gpu=all ubuntu nvidia-smi
 ```bash
 podman run --rm \
   --device nvidia.com/gpu=all \
-  docker.io/nvidia/samples:nbody nbody -gpu -benchmark
+  docker.io/nvidia/samples:nbody nbody -benchmark -numbodies=512
 ```
-![](/nvidia-cuda/container-toolkit/cuda-sample.png)
+![](/nvidia-cuda/container-toolkit/nbody-sample.png)
 ```bash
 podman run -it --name tfgpu --device nvidia.com/gpu=all -p 8888:8888 -v "${PWD}:/tf/notebooks" docker.io/tensorflow/tensorflow:latest-gpu-jupyter
 ```

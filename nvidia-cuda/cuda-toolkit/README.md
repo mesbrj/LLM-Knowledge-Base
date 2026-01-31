@@ -21,26 +21,27 @@ git clone https://github.com/NVIDIA/cuda-samples.git
 
 cd cuda-samples && mkdir build && cd build
 
-# Install OpenGL/GLUT, Vulkan, FreeImage, OpenMP and Open MPI libraries to compile all CUDA samples
+# Install OpenGL, Vulkan, FreeImage, OpenMP and Open MPI libraries and tools to compile all CUDA samples
 sudo apt install -y libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libglew-dev libglfw3-dev libfreeimage-dev libvulkan-dev vulkan-tools libopenmpi-dev openmpi-bin libegl1-mesa-dev
 
 cmake .. && make -j$(nproc)
 
 ```
+## My experience with CUDA samples in WSL2
+
 **NvSCI Sample not available to build and compile**. NVIDIA Software Communications Interface (NvSCI) is designed for:
 
 - **Embedded platforms**: NVIDIA Jetson, NVIDIA DRIVE (automotive)
-- **Safety-critical applications**: Inter-process communication with strict determinism
+- **Safety-critical applications**: Inter-process communication (IPC) with strict determinism
 - **Hardware-specific features**: Direct memory sharing between different engines (CPU, GPU, DLA, etc.)
-- **limitations**: Lacks the low-level hardware access NvSCI requires / No support for NvSCI's inter-engine synchronization primitives / Not included in standard desktop CUDA Toolkit distributions
 
 **CUDA-OpenGL and CUDA-Vulkan interoperability** samples will compile but will not run in WSL2 due to lack of support with paravirtualized GPU.
+- randomFog (build/Samples/4_CUDA_Libraries) is the only CUDA-OpenGL sample that runs successfully in WSL2.
 
 **Samples that will run in WSL2**:
-
 - CUDA computing
 - OpenMP and Open MPI
-- GPU image processing: FreeImage and NPP (NVIDIA Performance Primitives)
+- NPP (NVIDIA Performance Primitives) GPU image and signal processing
 
 
 ### Running samples:
@@ -58,3 +59,22 @@ cmake .. && make -j$(nproc)
 - This CUDA Sample demonstrates how to use NPP for histogram equalization for image data
 
 ![](/nvidia-cuda/cuda-toolkit/histEqualizationNPP.png)
+
+### Running (test) all samples
+```shell
+# from cuda-samples root directory
+# Running all tests without JSON configuration file (test_args.json) for executables (--config)
+python3 run_tests.py --output ./test --dir ./build/Samples
+```
+![](/nvidia-cuda/cuda-toolkit/run_tests.png)
+
+***OBS:*** The `nbody` sample can run seccessfully with correct arguments like: `-benchmark -numbodies=512`. The failed tests need to be investigated individually and the JSON configuration file is necessary to run specific samples with arguments.
+
+### Install samples
+```shell
+# cuda-samples root directory
+cd build/
+make install
+# default install location:
+# build/bin/x86_64/linux/release/
+```

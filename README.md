@@ -9,9 +9,9 @@
 
 ### Local LLMs
 
-- **[NVIDIA NIM](https://docs.nvidia.com/nim/large-language-models/latest/introduction.html) (NVIDIA Inference Microservices)**
-
 - [**Ollama**](/docs/LOCAL-LLM.md)
+
+- **[NVIDIA NIM](https://docs.nvidia.com/nim/large-language-models/latest/introduction.html) (NVIDIA Inference Microservices)**
 
 - **llama.cpp**
 
