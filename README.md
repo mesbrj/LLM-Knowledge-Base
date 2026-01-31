@@ -4,9 +4,9 @@
 
 ### Core techniques
 
-- [Locally LLMs with Ollama](/docs/LOCAL-LLM.md)
+- [Local LLMs with Ollama](/docs/LOCAL-LLM.md)
 
-- **Locally LLMs with llama.cpp**
+- **Local LLMs with llama.cpp**
 
 - [RAG + Summarization (Documentation System): Ollama, LangChain, Qdrant](/rag-pipeline/README.md)
 
