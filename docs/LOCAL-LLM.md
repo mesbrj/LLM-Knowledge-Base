@@ -1,7 +1,7 @@
 # Ollama and LLMs
 
 **Pre-requisites**: 
-- [CUDA Toolkit](/nvidia-cuda/cuda-toolkit/CUDA-TOOLKIT.md) installed in WSL2 with NVIDIA GPU support
+- [CUDA Toolkit](/nvidia-cuda/cuda-toolkit/README.md) installed in WSL2 with NVIDIA GPU support
 
 - [Install Ollama and pull models](https://docs.ollama.com/)
     - [deepseek-r1:14b Q4_K_M (size ~9.0GB)](https://ollama.com/library/deepseek-r1:14b)
